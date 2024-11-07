@@ -2528,7 +2528,6 @@ export const limitsForTeacherUser: Limits = {
     },
     classrooms: {
       hidePlayTab: false,
-      hideCommunityTab: false,
       hidePremiumProducts: false,
       hideUpgradeNotice: false,
       hideSocials: false,
@@ -2586,7 +2585,6 @@ export const limitsForStudentUser: Limits = {
     },
     classrooms: {
       hidePlayTab: true,
-      hideCommunityTab: true,
       hidePremiumProducts: true,
       hideSocials: true,
       hideUpgradeNotice: true,
