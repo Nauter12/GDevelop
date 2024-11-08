@@ -41,24 +41,6 @@ const useStyles = makeStyles({
   },
 });
 
-const getHelpItemsColumnsFromWidth = (
-  windowSize: WindowSizeType,
-  isLandscape: boolean
-) => {
-  switch (windowSize) {
-    case 'small':
-      return isLandscape ? 4 : 2;
-    case 'medium':
-      return 3;
-    case 'large':
-      return 4;
-    case 'xlarge':
-      return 5;
-    default:
-      return 3;
-  }
-};
-
 const getTutorialsColumnsFromWidth = (
   windowSize: WindowSizeType,
   isLandscape: boolean
@@ -77,7 +59,7 @@ const getTutorialsColumnsFromWidth = (
   }
 };
 
-const HELP_ITEMS_MAX_COLUMNS = getHelpItemsColumnsFromWidth('xlarge', true);
+const HELP_ITEMS_MAX_COLUMNS = 2;
 const styles = {
   grid: {
     textAlign: 'center',
@@ -152,12 +134,7 @@ const MainPage = ({
     values: { showInAppTutorialDeveloperMode },
   } = React.useContext(PreferencesContext);
   const classes = useStyles();
-  const {
-    windowSize,
-    isMobile,
-    isLandscape,
-    isMediumScreen,
-  } = useResponsiveWindowSize();
+  const { isMobile, isMediumScreen } = useResponsiveWindowSize();
   const helpItems: {
     title: React.Node,
     description: React.Node,
@@ -187,7 +164,7 @@ const MainPage = ({
       <SectionRow>
         <Line noMargin>
           <GridList
-            cols={getHelpItemsColumnsFromWidth(windowSize, isLandscape)}
+            cols={HELP_ITEMS_MAX_COLUMNS}
             style={styles.grid}
             cellHeight="auto"
             spacing={10}
