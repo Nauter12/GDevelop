@@ -531,7 +531,7 @@ const Model3DEditor = ({
           <Text size="block-title" noMargin>
             <Trans>Default orientation</Trans>
           </Text>
-          <ResponsiveLineStackLayout expand noColumnMargin>
+          <ResponsiveLineStackLayout noResponsiveLandscape expand noColumnMargin>
             <PropertyField
               objectConfiguration={objectConfiguration}
               propertyName="rotationX"
@@ -551,7 +551,7 @@ const Model3DEditor = ({
           <Text size="block-title" noMargin>
             <Trans>Default size</Trans>
           </Text>
-          <ResponsiveLineStackLayout expand noColumnMargin>
+          <ResponsiveLineStackLayout noResponsiveLandscape expand noColumnMargin>
             <PropertyField
               objectConfiguration={objectConfiguration}
               propertyName="width"
@@ -585,7 +585,7 @@ const Model3DEditor = ({
           <Text size="block-title" noMargin>
             <Trans>Points</Trans>
           </Text>
-          <ResponsiveLineStackLayout expand noColumnMargin>
+          <ResponsiveLineStackLayout noResponsiveLandscape expand noColumnMargin>
             <SelectField
               value={originLocation}
               floatingLabelText={properties.get('originLocation').getLabel()}
